@@ -1,12 +1,13 @@
+import LoginSignup from "../auth/LoginSignup";
+import { Footer, Navber } from "../partials";
 import React, { Fragment, useState } from "react";
 import { signupReq } from "./fetchApi";
 
-const Signup = (props) => {
+const ContactComponent = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
-    password: "",
-    cPassword: "",
+    message: "",
     error: false,
     loading: false,
     success: false,
@@ -18,21 +19,12 @@ const Signup = (props) => {
 
   const formSubmit = async () => {
     setData({ ...data, loading: true });
-    if (data.cPassword !== data.password) {
-      return setData({
-        ...data,
-        error: {
-          cPassword: "Password doesn't match",
-          password: "Password doesn't match",
-        },
-      });
-    }
     try {
       let responseData = await signupReq({
         name: data.name,
         email: data.email,
-        password: data.password,
-        cPassword: data.cPassword,
+        password: "data.password",
+        cPassword: "data.password",
       });
       if (responseData.error) {
         setData({
@@ -47,6 +39,7 @@ const Signup = (props) => {
           success: responseData.success,
           name: "",
           email: "",
+          reference: "",
           password: "",
           cPassword: "",
           loading: false,
@@ -60,11 +53,10 @@ const Signup = (props) => {
 
   return (
     <Fragment>
-      <div className="text-center text-2xl mb-6 grid grid-cols-2 items-center">
-        <img src="/logo.png" alt="logo" className="w-32" />
-        <div className="text-2xl text-left font-bold">S'inscrire</div>
+      <div className="text-center text-2xl mt-64 font-semibold uppercase">
+        Nous Contacter
       </div>
-      <form className="space-y-4">
+      <form className="space-y-4 m-64 mt-8 ">
         {data.success ? alert(data.success, "green") : ""}
         <div className="flex flex-col">
           <label htmlFor="name">
@@ -111,30 +103,8 @@ const Signup = (props) => {
           {!data.error ? "" : alert(data.error.email, "red")}
         </div>
         <div className="flex flex-col">
-          <label htmlFor="password">
-            Mot de passe<span className="text-sm text-gray-600 ml-1">*</span>
-          </label>
-          <input
-            onChange={(e) =>
-              setData({
-                ...data,
-                success: false,
-                error: {},
-                password: e.target.value,
-              })
-            }
-            value={data.password}
-            type="password"
-            id="password"
-            className={`${
-              data.error.password ? "border-red-500" : ""
-            } px-4 py-2 focus:outline-none border`}
-          />
-          {!data.error ? "" : alert(data.error.password, "red")}
-        </div>
-        <div className="flex flex-col">
-          <label htmlFor="cPassword">
-            Confirmer mot de passe
+          <label htmlFor="reference">
+            Référence Commande{" "}
             <span className="text-sm text-gray-600 ml-1">*</span>
           </label>
           <input
@@ -143,43 +113,110 @@ const Signup = (props) => {
                 ...data,
                 success: false,
                 error: {},
-                cPassword: e.target.value,
+                name: e.target.value,
               })
             }
-            value={data.cPassword}
-            type="password"
-            id="cPassword"
+            value={data.reference}
+            type="text"
+            id="reference"
             className={`${
-              data.error.cPassword ? "border-red-500" : ""
+              data.error.name ? "border-red-500" : ""
             } px-4 py-2 focus:outline-none border`}
           />
-          {!data.error ? "" : alert(data.error.cPassword, "red")}
+          {!data.error ? "" : alert(data.error.name, "red")}
         </div>
-        <div className="flex flex-col space-y-2 md:flex-row md:justify-between md:items-center">
-          <div>
-            <input
-              type="checkbox"
-              id="rememberMe"
-              className="px-4 py-2 focus:outline-none border mr-1"
-            />
-            <label htmlFor="rememberMe">
-              Se rappeler de moi<span className="text-sm text-gray-600">*</span>
-            </label>
-          </div>
-          <a className="hidden block text-gray-600" href="/">
-            Mot de passe oublié ?
-          </a>
+        <div className="flex flex-col">
+          <label htmlFor="email">
+            Message<span className="text-sm text-gray-600 ml-1">*</span>
+          </label>
+          <textarea
+            onChange={(e) =>
+              setData({
+                ...data,
+                success: false,
+                error: {},
+                email: e.target.value,
+              })
+            }
+            id="message"
+            rows={6}
+            className={`${
+              data.error.email ? "border-red-500" : ""
+            } px-4 py-2 focus:outline-none border`}
+          >
+            {data.email}
+          </textarea>
+
+          {!data.error ? "" : alert(data.error.email, "red")}
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="reference">
+            Référence Commande{" "}
+            <span className="text-sm text-gray-600 ml-1">*</span>
+          </label>
+          <input
+            onChange={(e) =>
+              setData({
+                ...data,
+                success: false,
+                error: {},
+                name: e.target.value,
+              })
+            }
+            value={data.reference}
+            type="text"
+            id="reference"
+            className={`${
+              data.error.name ? "border-red-500" : ""
+            } px-4 py-2 focus:outline-none border`}
+          />
+          {!data.error ? "" : alert(data.error.name, "red")}
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="email">
+            Pièces jointes<span className="text-sm text-gray-600 ml-1"></span>
+          </label>
+          <input
+            onChange={(e) =>
+              setData({
+                ...data,
+                success: false,
+                error: {},
+                email: e.target.value,
+              })
+            }
+            value={data.email}
+            type="file"
+            id="jointe"
+            className={`${
+              data.error.email ? "border-red-500" : ""
+            } px-4 py-2 focus:outline-none border`}
+          />
+          {!data.error ? "" : alert(data.error.email, "red")}
         </div>
         <div
           onClick={(e) => formSubmit()}
           style={{ background: "#303031" }}
-          className="px-4 py-2 text-white text-center cursor-pointer font-medium"
+          className="px-4 py-2 text-white text-center cursor-pointer font-medium uppercase"
         >
-          Enregistrer
+          Envoyer
         </div>
       </form>
     </Fragment>
   );
 };
 
-export default Signup;
+const Contact = (props) => {
+  return (
+    <Fragment>
+      <div className="flex-grow">
+        <Navber />
+        <LoginSignup />
+        <ContactComponent />
+      </div>
+      <Footer />
+    </Fragment>
+  );
+};
+
+export default Contact;

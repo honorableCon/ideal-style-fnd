@@ -11,6 +11,8 @@ import ProductDetails from "./productDetails";
 import ProductByCategory from "./home/ProductByCategory";
 import CheckoutPage from "./order/CheckoutPage";
 import WhoAmi from "./whoami";
+import CGV from "./cgv";
+import Contact from "./contact";
 
 export {
   Home,
@@ -28,4 +30,6 @@ export {
   ProductByCategory,
   CheckoutPage,
   WhoAmi,
+  CGV,
+  Contact,
 };

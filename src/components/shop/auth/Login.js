@@ -41,7 +41,10 @@ const Login = (props) => {
 
   return (
     <Fragment>
-      <div className="text-center text-2xl mb-6">Login</div>
+      <div className="text-center text-2xl mb-6 grid grid-cols-2 items-center">
+        <img src="/logo.png" alt="logo" className="w-32" />
+        <div className="text-2xl text-left font-bold">Connexion</div>
+      </div>
       {layoutData.loginSignupError ? (
         <div className="bg-red-200 py-2 px-4 rounded">
           You need to login for checkout. Haven't accont? Create new one.

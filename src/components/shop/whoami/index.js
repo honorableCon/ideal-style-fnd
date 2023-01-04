@@ -14,11 +14,11 @@ const WhoAmiComponent = () => {
         pour les femmes musulmanes modernes et toute femme désirant s’habiller
         de manière moderne tout en restant pudique. <br />
         Tuniques, chemisiers, gilets, robes, abayas, pantalons, foulards, jupes,
-        vestes, combinaisons, ensembles, hijabs et accessoires etc…, <br />
-        Ideal Style propose à une clientèle féminine, en quête d’originalité,
-        des pièces uniques qui leur parlent et leur ressemblent, alliant mode et
-        pudeur, confectionnés avec des matières de qualité et qui procurent aux
-        femmes confort et légèreté. <br />
+        vestes, combinaisons, ensembles, hijabs et accessoires etc…, Ideal Style
+        propose à une clientèle féminine, en quête d’originalité, des pièces
+        uniques qui leur parlent et leur ressemblent, alliant mode et pudeur,
+        confectionnés avec des matières de qualité et qui procurent aux femmes
+        confort et légèreté. <br />
         L'équipe Ideal Style déploie beaucoup d’énergie à sélectionner des
         articles de bonne qualité à des prix abordables, et composer des
         ensembles pour tous les goûts. <br />

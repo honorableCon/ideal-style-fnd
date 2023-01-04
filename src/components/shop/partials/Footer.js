@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { logout } from "./Action";
 
 const Footer = (props) => {
   return (
@@ -18,17 +19,12 @@ const Footer = (props) => {
                   </a>
                 </li>
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">
+                  <a href="/contact-us" class="hover:underline">
                     Contactez-nous
                   </a>
                 </li>
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">
-                    Livraison & Retour
-                  </a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">
+                  <a href="/cgv" class="hover:underline">
                     Conditions générales de vente
                   </a>
                 </li>
@@ -41,21 +37,21 @@ const Footer = (props) => {
               </h2>
               <ul class="text-white dark:text-gray-400">
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">
+                  <a href="/user/orders" class="hover:underline">
                     Mes Commandes
                   </a>
                 </li>
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">
-                    Mes Retours
+                  <a href="/contact-us" class="hover:underline">
+                    Annulation et retour
                   </a>
                 </li>
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">
+                  <a href="/user/profile" class="hover:underline">
                     Mes Informations
                   </a>
                 </li>
-                <li class="mb-4">
+                {/* <li class="mb-4">
                   <a href="#" class="hover:underline">
                     Mes Adresses
                   </a>
@@ -64,8 +60,8 @@ const Footer = (props) => {
                   <a href="#" class="hover:underline">
                     Mes Bons de réduction
                   </a>
-                </li>
-                <li class="mb-4">
+                </li> */}
+                <li onClick={(e) => logout()} class="mb-4">
                   <a href="#" class="hover:underline">
                     Deconnexion
                   </a>

@@ -10,6 +10,8 @@ import {
   ProductByCategory,
   CheckoutPage,
   WhoAmi,
+  CGV,
+  Contact,
 } from "./shop";
 import { DashboardAdmin, Categories, Products, Orders } from "./admin";
 import { UserProfile, UserOrders, SettingUser } from "./shop/dashboardUser";
@@ -24,6 +26,8 @@ const Routes = (props) => {
         {/* Shop & Public Routes */}
         <Route exact path="/" component={Home} />
         <Route exact path="/whoami" component={WhoAmi} />
+        <Route exact path="/contact-us" component={Contact} />
+        <Route exact path="/cgv" component={CGV} />
         <Route exact path="/wish-list" component={WishList} />
         <Route exact path="/products/:id" component={ProductDetails} />
         <Route
