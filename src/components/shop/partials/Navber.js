@@ -32,12 +32,12 @@ const Navber = (props) => {
       {/* Navber Section */}
       <nav className="fixed top-0 w-full z-20 shadow-lg lg:shadow-none bg-white">
         <div className="m-4 md:mx-12 md:my-6 grid grid-cols-4 lg:grid-cols-3">
-          <div className="hidden lg:block col-span-1 flex text-gray-600 mt-1">
+          <div className="hidden lg:block col-span-1 flex text-black mt-1">
             <span
-              className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
+              className="bg-black font-semibold text-white rounded-full mr-4 hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/")}
             >
-              Shop
+              Accueil
             </span>
             {/* <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
@@ -46,16 +46,16 @@ const Navber = (props) => {
               Blog
             </span> */}
             <span
-              className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
+              className="bg-black font-semibold text-white rounded-full hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/contact-us")}
             >
-              Contact us
+              Contact
             </span>
           </div>
           <div className="col-span-2 lg:hidden flex justify-items-stretch	 items-center">
             <svg
               onClick={(e) => navberToggleOpen()}
-              className="col-span-1 lg:hidden w-8 h-8 cursor-pointer text-gray-600"
+              className="col-span-1 lg:hidden w-8 h-8 cursor-pointer text-black"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -73,7 +73,8 @@ const Navber = (props) => {
               style={{ letterSpacing: "0.10rem" }}
               className="flex items-left text-center font-bold uppercase text-gray-800 text-xl cursor-pointer px-2 text-center"
             >
-              Ideal Style Sénégal
+              {/* Ideal Style Sénégal */}
+              <img src="/logo.png" alt="logo" className="hidden w-20 h-15" />
             </span>
           </div>
           <div
@@ -81,7 +82,10 @@ const Navber = (props) => {
             style={{ letterSpacing: "0.70rem" }}
             className="hidden lg:block flex items-left col-span-1 text-center text-gray-800 font-bold tracking-widest uppercase text-lg cursor-pointer"
           >
-            Ideal Style Sénégal
+            {/* Ideal Style Sénégal */}
+            <div className="flex justify-center ">
+              <img src="/logo.png" alt="logo" className="w-64 h-32" />
+            </div>
           </div>
           <div className="flex items-right col-span-2 lg:col-span-1 flex justify-end">
             {/*  WishList Page Button */}
@@ -95,7 +99,7 @@ const Navber = (props) => {
                   location.pathname === "/wish-list"
                     ? "fill-current text-gray-800"
                     : ""
-                } w-8 h-8 text-gray-600 cursor-pointer`}
+                } w-8 h-8 text-black cursor-pointer`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -116,7 +120,7 @@ const Navber = (props) => {
                   title="Logout"
                 >
                   <svg
-                    className="cursor-pointer w-8 h-8 text-gray-600 hover:text-gray-800"
+                    className="cursor-pointer w-8 h-8 text-black hover:text-gray-800"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -318,7 +322,7 @@ const Navber = (props) => {
                 title="Login"
               >
                 <svg
-                  className="w-8 h-8 text-gray-600 hover:text-gray-800"
+                  className="w-8 h-8 text-black hover:text-gray-800"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -340,7 +344,7 @@ const Navber = (props) => {
               title="Cart"
             >
               <svg
-                className="w-8 h-8 text-gray-600 hover:text-gray-800"
+                className="w-8 h-8 text-black hover:text-gray-800"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -366,24 +370,24 @@ const Navber = (props) => {
               : "hidden px-1 pb-2 md:pb-0 md:px-10 lg:hidden"
           }
         >
-          <div className="col-span-1 flex flex-col text-gray-600">
+          <div className="col-span-1 flex flex-col text-black">
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/")}
             >
-              Shop
+              Accueil
             </span>
-            <span
+            {/* <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/blog")}
             >
               Blog
-            </span>
+            </span> */}
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/contact-us")}
             >
-              Contact us
+              Contact
             </span>
           </div>
         </div>

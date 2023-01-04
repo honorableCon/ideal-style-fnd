@@ -9,6 +9,7 @@ import {
   ProductDetails,
   ProductByCategory,
   CheckoutPage,
+  WhoAmi,
 } from "./shop";
 import { DashboardAdmin, Categories, Products, Orders } from "./admin";
 import { UserProfile, UserOrders, SettingUser } from "./shop/dashboardUser";
@@ -22,6 +23,7 @@ const Routes = (props) => {
       <Switch>
         {/* Shop & Public Routes */}
         <Route exact path="/" component={Home} />
+        <Route exact path="/whoami" component={WhoAmi} />
         <Route exact path="/wish-list" component={WishList} />
         <Route exact path="/products/:id" component={ProductDetails} />
         <Route

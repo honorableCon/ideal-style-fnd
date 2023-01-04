@@ -15,7 +15,7 @@ const ProductCategory = (props) => {
               payload: !data.categoryListDropdown,
             })
           }
-          className={`flex items-center space-x-1 cursor-pointer ${
+          className={`flex items-center space-x-1 cursor-pointer bg-black p-2 px-4 text-white rounded-full ${
             data.categoryListDropdown ? "text-yellow-700" : ""
           }`}
         >
@@ -37,7 +37,7 @@ const ProductCategory = (props) => {
             ></path>
           </svg>
         </div>
-        <div className="flex space-x-2">
+        <div className="flex items-center space-x-2">
           <div
             onClick={(e) =>
               dispatch({

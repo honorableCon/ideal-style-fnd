@@ -37,3 +37,9 @@
   height: 65vh !important;
   object-fit: cover;
 }
+
+.scale-im:hover {
+  transform: scale(1.1);
+  transition: 0.6s all ease;
+  will-change: transform;
+}
