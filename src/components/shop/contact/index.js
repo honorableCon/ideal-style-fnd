@@ -4,6 +4,7 @@ import React, { Fragment, useState } from "react";
 import { signupReq } from "./fetchApi";
 
 const ContactComponent = () => {
+  const [popup, setPopup] = useState(false);
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -13,46 +14,9 @@ const ContactComponent = () => {
     success: false,
   });
 
-  const alert = (msg, type) => (
-    <div className={`text-sm text-${type}-500`}>{msg}</div>
-  );
-
-  const formSubmit = async () => {
-    setData({ ...data, loading: true });
-    try {
-      let responseData = await signupReq({
-        name: data.name,
-        email: data.email,
-        password: "data.password",
-        cPassword: "data.password",
-      });
-      if (responseData.error) {
-        setData({
-          ...data,
-          loading: false,
-          error: responseData.error,
-          password: "",
-          cPassword: "",
-        });
-      } else if (responseData.success) {
-        setData({
-          success: responseData.success,
-          name: "",
-          email: "",
-          reference: "",
-          password: "",
-          cPassword: "",
-          loading: false,
-          error: false,
-        });
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
     <Fragment>
+      {popup && <SuccessPopup setPopup={setPopup} />}
       <div className="text-center text-2xl mt-64 font-semibold uppercase">
         Nous Contacter
       </div>
@@ -66,8 +30,6 @@ const ContactComponent = () => {
             onChange={(e) =>
               setData({
                 ...data,
-                success: false,
-                error: {},
                 name: e.target.value,
               })
             }
@@ -85,15 +47,6 @@ const ContactComponent = () => {
             Adresse email<span className="text-sm text-gray-600 ml-1">*</span>
           </label>
           <input
-            onChange={(e) =>
-              setData({
-                ...data,
-                success: false,
-                error: {},
-                email: e.target.value,
-              })
-            }
-            value={data.email}
             type="email"
             id="email"
             className={`${
@@ -108,14 +61,6 @@ const ContactComponent = () => {
             <span className="text-sm text-gray-600 ml-1">*</span>
           </label>
           <input
-            onChange={(e) =>
-              setData({
-                ...data,
-                success: false,
-                error: {},
-                name: e.target.value,
-              })
-            }
             value={data.reference}
             type="text"
             id="reference"
@@ -130,14 +75,6 @@ const ContactComponent = () => {
             Message<span className="text-sm text-gray-600 ml-1">*</span>
           </label>
           <textarea
-            onChange={(e) =>
-              setData({
-                ...data,
-                success: false,
-                error: {},
-                email: e.target.value,
-              })
-            }
             id="message"
             rows={6}
             className={`${
@@ -195,7 +132,7 @@ const ContactComponent = () => {
           {!data.error ? "" : alert(data.error.email, "red")}
         </div>
         <div
-          onClick={(e) => formSubmit()}
+          onClick={(e) => setPopup(true)}
           style={{ background: "#303031" }}
           className="px-4 py-2 text-white text-center cursor-pointer font-medium uppercase"
         >
@@ -220,3 +157,26 @@ const Contact = (props) => {
 };
 
 export default Contact;
+
+export const SuccessPopup = ({ setPopup }) => {
+  return (
+    <div className="fixed top-1 left-1  p-64 w-full h-full bg-black bg-opacity-50 z-50">
+      <div className="w-64 bg-white rounded-lg mx-auto p-8">
+        <div className="grid justify-center items-center h-full">
+          <img className="h-16 mb-8 mx-auto" src={"/logo.png"} alt="logo" />
+          <div className="text-center text-md font-semibold text-green-600">
+            {/* message pour dire aux client nous allons repondre */}
+            Votre message a été envoyé avec succès, nous vous répondrons dans
+            les plus brefs délais.
+          </div>
+          <div
+            onClick={(e) => setPopup(false)}
+            className="text-center text-md font-semibold mt-8 p-2 text-white bg-black rounded-full cursor-pointer"
+          >
+            fermer
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
