@@ -63,7 +63,7 @@ const CategoryList = () => {
 
 const FilterList = () => {
   const { data, dispatch } = useContext(HomeContext);
-  const [range, setRange] = useState(0);
+  const [range, setRange] = useState(1000);
 
   const rangeHandle = (e) => {
     setRange(e.target.value);
@@ -111,17 +111,18 @@ const FilterList = () => {
         <div className="flex justify-between items-center">
           <div className="flex flex-col space-y-2  w-2/3 lg:w-2/4">
             <label htmlFor="points" className="text-sm">
-              Prix (entre 0 et 5000 FCFA):{" "}
+              Prix (entre 1000 et{" "}
               <span className="font-semibold text-yellow-700">
                 {range} FCFA
               </span>{" "}
+              )
             </label>
             <input
               value={range}
               className="slider"
               type="range"
               id="points"
-              min="0"
+              min="1000"
               max="100000"
               step="1000"
               onChange={(e) => rangeHandle(e)}
