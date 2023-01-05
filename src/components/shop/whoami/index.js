@@ -6,10 +6,10 @@ import { Footer, Navber } from "../partials";
 const WhoAmiComponent = () => {
   return (
     <Fragment>
-      <h1 className="text-black text-4xl font-bold mt-64 mb-16 mx-64">
+      <h1 className="text-black text-3xl md:text-4xl font-bold mt-32 mx-8 mb-8 md:mt-64 md:mb-16 md:mx-64">
         Qui sommes-nous ?
       </h1>
-      <p className="text-black mx-64 text-justify leading-7">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 mb-16">
         Ideal Style est une boutique de vêtements prêt à porter basée au Sénégal
         pour les femmes musulmanes modernes et toute femme désirant s’habiller
         de manière moderne tout en restant pudique. <br />

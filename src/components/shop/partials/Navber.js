@@ -39,12 +39,6 @@ const Navber = (props) => {
             >
               Accueil
             </span>
-            {/* <span
-              className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
-              onClick={(e) => history.push("/blog")}
-            >
-              Blog
-            </span> */}
             <span
               className="bg-black font-semibold text-white rounded-full hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/contact-us")}
@@ -92,7 +86,7 @@ const Navber = (props) => {
             <div
               onClick={(e) => history.push("/wish-list")}
               className="hover:bg-gray-200 rounded-lg px-2 py-2 cursor-pointer"
-              title="Wishlist"
+              title="Ma liste de souhaits"
             >
               <svg
                 className={`${
@@ -117,7 +111,7 @@ const Navber = (props) => {
               <Fragment>
                 <div
                   className="userDropdownBtn hover:bg-gray-200 px-2 py-2 rounded-lg relative"
-                  title="Logout"
+                  title="Se deconnecter"
                 >
                   <svg
                     className="cursor-pointer w-8 h-8 text-black hover:text-gray-800"
@@ -319,7 +313,7 @@ const Navber = (props) => {
               <div
                 onClick={(e) => loginModalOpen()}
                 className="cursor-pointer hover:bg-gray-200 px-2 py-2 rounded-lg"
-                title="Login"
+                title="Se connecter"
               >
                 <svg
                   className="w-8 h-8 text-black hover:text-gray-800"
@@ -341,7 +335,7 @@ const Navber = (props) => {
             <div
               onClick={(e) => cartModalOpen()}
               className="hover:bg-gray-200 px-2 py-2 rounded-lg relative cursor-pointer"
-              title="Cart"
+              title="Mon Panier"
             >
               <svg
                 className="w-8 h-8 text-black hover:text-gray-800"
@@ -377,12 +371,6 @@ const Navber = (props) => {
             >
               Accueil
             </span>
-            {/* <span
-              className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
-              onClick={(e) => history.push("/blog")}
-            >
-              Blog
-            </span> */}
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/contact-us")}

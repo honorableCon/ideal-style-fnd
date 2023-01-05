@@ -1,7 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import Layout from "../layout";
-import { productByCategory } from "../../admin/products/FetchApi";
+import {
+  getAllProduct,
+  productByCategory,
+} from "../../admin/products/FetchApi";
 
 const apiURL = process.env.REACT_APP_API_URL;
 
@@ -131,6 +134,13 @@ const PageComponent = () => {
 
   const fetchData = async () => {
     try {
+      if (catId == "all") {
+        let responseData = await getAllProduct();
+        if (responseData && responseData.Products) {
+          setProducts(responseData.Products);
+        }
+        return;
+      }
       let responseData = await productByCategory(catId);
       if (responseData && responseData.Products) {
         setProducts(responseData.Products);

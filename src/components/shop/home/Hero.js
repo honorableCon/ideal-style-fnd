@@ -16,7 +16,19 @@ const Hero = (props) => {
     try {
       let responseData = await getAllCategory();
       if (responseData && responseData.Categories) {
-        setCategories(responseData.Categories.slice(0, 2));
+        let categories = [
+          {
+            cName: "TOUTEs NOS nouveautés",
+            _id: "all",
+            cImage: "1672935308177_new.jpeg",
+          },
+        ];
+        responseData.Categories.filter((item) => {
+          if (item.cName == "Nos Coups De Coeur") {
+            categories.push(item);
+          }
+        });
+        setCategories(categories);
       }
     } catch (error) {
       console.log(error);
@@ -30,9 +42,9 @@ const Hero = (props) => {
           categories.map((item, index) => {
             return (
               <Fragment key={index}>
-                <div className="h-fit col-span-1 m-2 flex flex-col bg-black overflow-hidden items-center justify-center space-y-2  md:mt-20 relative">
+                <div className="h-fit col-span-1 m-2 flex flex-col bg-black overflow-hidden items-center justify-center space-y-2  md:mt-32 relative">
                   <img
-                    className="h-full object-cover object-right opacity-75 hover:opacity-75 scale-im  transition duration-500 ease-in-out"
+                    className="h-full object-cover object-top opacity-75 hover:opacity-75 scale-im  transition duration-500 ease-in-out"
                     src={`${apiURL}/uploads/categories/${item.cImage}`}
                     alt="pic"
                   />
@@ -49,7 +61,7 @@ const Hero = (props) => {
                         }
                         className="bg-white text-black p-2 px-4 md:px-6 md:py-4 rounded-full font-bold shadow-md uppercase"
                       >
-                        {index === 0 ? "Découvrir" : "Découvrir"}
+                        Découvrir
                       </button>
                     </div>
                   </div>

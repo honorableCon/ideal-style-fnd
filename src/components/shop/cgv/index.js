@@ -5,10 +5,10 @@ import { Footer, Navber } from "../partials";
 const CGVComponent = () => {
   return (
     <Fragment>
-      <h1 className="text-black text-4xl font-bold mt-64 mb-16 mx-64">
+      <h1 className="text-black text-3xl md:text-4xl font-bold mt-32 mx-8 mb-8 md:mt-64 md:mb-16 md:mx-64">
         Conditions générales de vente
       </h1>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Ideal Style vend les articles présents sur son site de vente, uniquement
         au détail et à des consommateurs finaux. Toute commande ne correspondant
         manifestement pas à une vente au détail et, plus généralement, toute
@@ -25,8 +25,10 @@ const CGVComponent = () => {
         Ideal Style sont individuellement ou collectivement désignés la Partie
         ou les Parties.
       </p>
-      <h2 className="text-black text-2xl font-bold  my-6 mx-64">Article 1 :</h2>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <h2 className="text-black text-2xl font-bold  my-6 mx-8 md:mx-64">
+        Article 1 :
+      </h2>
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Les présentes Conditions Générales de Vente (ci-après « CGV ») ont pour
         objet, d’une part, d’informer tout éventuel Acheteur sur les conditions
         et modalités dans lesquelles le vendeur (ci-après « IDEAL STYLE » ou «
@@ -45,21 +47,21 @@ const CGVComponent = () => {
         par les Conditions Générales d’Utilisation du Site ainsi que la charte «
         Données personnelles & Cookies » applicables à l’Acheteur.
       </p>
-      <h2 className="text-black text-2xl font-bold  my-6 mx-64">
+      <h2 className="text-black text-2xl font-bold  my-6 mx-8 md:mx-64">
         Article 2: Identité de la Société
       </h2>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Nom : Ideal Style Senegal <br />
         Téléphone : +221 78 472 53 03 <br />
         Email : idealstylesenegal@gmail.com
       </p>
-      <h2 className="text-black text-2xl font-bold  my-6 mx-64">
+      <h2 className="text-black text-2xl font-bold  my-6 mx-8 md:mx-64">
         Article 3 : Formation du contrat et commandes
       </h2>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         3.1 Tarifs{" "}
       </h3>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Les prix de vente des articles en ligne sur le Site de IDEAL STYLE,
         indiqués en francs CFA, sont ceux en vigueur au moment de la passation
         de la Commande par l’Acheteur. Les prix de vente des articles peuvent
@@ -80,10 +82,10 @@ const CGVComponent = () => {
         moment par IDEAL STYLE. Aussi IDEAL STYLE conseille à tout Acheteur de
         consulter régulièrement les CGV figurant sur le Site.
       </p>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         3.2 Caractéristiques des articles
       </h3>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         L’Acheteur peut sélectionner un ou plusieurs articles parmi les
         différentes catégories proposées sur le Site de IDEAL STYLE. <br />
         <br />
@@ -108,10 +110,10 @@ const CGVComponent = () => {
         IDEAL STYLE en appelant le Service Clients au 00221 78 472 53 03
         (Service gratuit + prix de l’appel) aux heures d’ouverture.
       </p>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         3.3 Disponibilité
       </h3>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Les offres présentées par IDEAL STYLE sont valables tant qu’elles sont
         annoncées sur le Site et dans la limite des stocks disponibles. <br />
         <br />
@@ -144,10 +146,10 @@ const CGVComponent = () => {
         dans les plus brefs délais et, au plus tard, dans les 30 jours du
         paiement des sommes qu’il a versé.
       </p>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         3.4 Commande
       </h3>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Toute Commande vaut acceptation des présentes Conditions Générales de
         Vente, des Mentions Légales et Conditions Générales d’Utilisation et de
         la Charte « Données personnelles & Cookies », sans préjudice de
@@ -205,37 +207,37 @@ const CGVComponent = () => {
         l’utilisation du Site de IDEAL STYLE, y compris à l’occasion de
         Commandes antérieures.
       </p>
-      <h2 className="text-black text-2xl font-bold  my-6 mx-64">
+      <h2 className="text-black text-2xl font-bold  my-6 mx-8 md:mx-64">
         Article 4 : Paiement
       </h2>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         L’Acheteur a la possibilité de régler sa Commande sur le Site, à la
         livraison ou en ligne dans les conditions visées ci-dessous. L’Acheteur
         garantit à IDEAL STYLE qu’il dispose des autorisations nécessaires pour
         utiliser le mode de règlement qu’il aura choisi pour sa Commande, lors
         de l’enregistrement de la Commande.
       </p>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         4.1 Paiement à la livraison
       </h3>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Lorsque l’Acheteur s’engage à payer à la livraison, il s’engage à
         disposer de la somme intégrale due en tenant compte du fait que le
         coursier n’ait pas obligatoirement la monnaie.
       </p>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         4.2 Paiement en ligne
       </h3>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Les cartes bancaires autorisées sur ce Site sont : Visa et MasterCard.
         Le paiement peut également être fait via Orange Money, Wave ou tout
         autre moyen de paiement proposé par Paydunya (Société partenaire gérant
         les paiements en ligne de Ideal Style.
       </p>
-      <h2 className="text-black text-2xl font-bold  my-6 mx-64">
+      <h2 className="text-black text-2xl font-bold  my-6 mx-8 md:mx-64">
         Article 5: Conditions de retour
       </h2>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Tous les articles achetés en ligne sur Ideal Style peuvent être
         retournés dans 48 heures suivant leur réception. Articles exclus des
         retours : des articles qui ont été descellés par l’Acheteur après la
@@ -248,10 +250,10 @@ const CGVComponent = () => {
         accessoires, échantillons, notice…). Si les articles ont été détériorés,
         nous nous réservons le droit d’accepter ou non le retour.
       </p>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         5.1 Procédure de retour des articles
       </h3>
-      <div className="text-black mx-64 text-justify leading-7">
+      <div className="text-black mx-8 md:mx-64 text-justify leading-7">
         Lorsque l’Acheteur reçoit sa commande et qu’il constate que la commande
         reçue ne correspond pas à la commande effectuée sur le site, Ideal Style
         lui donne trois possibilité :
@@ -274,10 +276,10 @@ const CGVComponent = () => {
           </li>
         </ul>
       </div>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         5.2 Remboursement
       </h3>
-      <p className="text-black mx-64 text-justify leading-7 text-xl">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 text-xl">
         Si l’Acheteur souhaite annuler ou retourner sa commande dans les
         conditions ci-dessus mentionnées, Ideal Style s’engage à lui rembourser
         le montant exact du ou des articles retournés, les frais de retour étant
@@ -289,10 +291,10 @@ const CGVComponent = () => {
         réclamation. L’acheteur doit obligatoirement passer par le processus
         indiqué plus haut.
       </p>
-      <h3 className="mx-64 my-2 font-medium text-black text-xl italic">
+      <h3 className="mx-8 md:mx-64 my-2 font-medium text-black text-xl italic">
         5.3 Échange
       </h3>
-      <p className="text-black mx-64 text-justify leading-7 mb-8">
+      <p className="text-black mx-8 md:mx-64 text-justify leading-7 mb-8">
         Une fois que les conditions de retour sont respectées, l’Acheteur peut à
         la place d’un retour demander un échange, sachant que les frais de
         retour seront à sa charge.
