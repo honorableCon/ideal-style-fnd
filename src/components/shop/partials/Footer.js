@@ -313,7 +313,7 @@ const Footer = (props) => {
                     alt="tiktok"
                   />
                   <a
-                    href="www.tiktok.com/@idealstylesenegal"
+                    href="https://www.tiktok.com/@idealstylesenegal"
                     class="ml-4 hover:underline"
                   >
                     Tik-Tok
