@@ -140,6 +140,7 @@ const ReviewForm = (props) => {
                 className="border px-4 py-2 focus:outline-none"
                 name="textArea"
                 id="textArea"
+                maxLength={250}
                 cols={30}
                 rows={3}
                 placeholder="Votre avis..."

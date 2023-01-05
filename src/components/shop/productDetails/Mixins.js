@@ -75,6 +75,12 @@ export const addToCart = (
   let cart = localStorage.getItem("cart")
     ? JSON.parse(localStorage.getItem("cart"))
     : [];
+
+  if (cart.length > 19) {
+    return alert(
+      "Panier plein !\n Veuillez valider votre commande afin de poursuivre vos achats."
+    );
+  }
   if (cart.length > 0) {
     cart.forEach((item) => {
       if (item.id === id) {
