@@ -113,7 +113,7 @@ export const CheckoutComponent = (props) => {
                       placeholder="+221"
                     />
                   </div>
-                  {/* <DropIn
+                  <DropIn
                     options={{
                       authorization: state.clientToken,
                       paypal: {
@@ -121,7 +121,69 @@ export const CheckoutComponent = (props) => {
                       },
                     }}
                     onInstance={(instance) => (state.instance = instance)}
-                  /> */}
+                  />
+                  {/* radiobutton */}
+                  <fieldset className="flex flex-col py-2">
+                    <label htmlFor="address" className="text-black pb-4">
+                      Mode de paiement locales
+                    </label>
+                    <div className="flex gap-8">
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="radio"
+                          id="address"
+                          className="border px-4 py-2"
+                          name="payment"
+                        />
+                        <label htmlFor="address" className="pb-2">
+                          <img
+                            className="h-12 rounded-md"
+                            src="https://www.sanwi-informatique.com/img/cms/orange-money.png"
+                          />
+                        </label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="radio"
+                          id="address"
+                          className="border px-4 py-2"
+                          name="payment"
+                        />
+                        <label htmlFor="address" className="pb-2">
+                          <img
+                            className="h-12 rounded-md"
+                            src="https://s.rfi.fr/media/display/ed44f02a-c239-11ec-b0fc-005056bf8594/w:720/p:16x9/wave-senegal-mobile-money.png"
+                          />
+                        </label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="radio"
+                          id="address"
+                          className="border px-4 py-2"
+                          name="payment"
+                        />
+                        <label htmlFor="address" className="pb-2">
+                          <img
+                            className="h-12 rounded-md"
+                            src="https://paydunya.com/refont/images/icon_pydu/partners/free.png"
+                          />
+                        </label>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="radio"
+                          id="address"
+                          className="border px-4 py-2"
+                          name="payment"
+                        />
+                        <label htmlFor="address" className="pb-2">
+                          Paiement à la livraison
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+
                   <div
                     onClick={(e) =>
                       pay(
@@ -134,8 +196,8 @@ export const CheckoutComponent = (props) => {
                         history
                       )
                     }
-                    className="w-full px-4 py-2 text-center text-white font-semibold cursor-pointer"
-                    style={{ background: "#303031" }}
+                    className="w-full px-4 py-3 my-2 text-center text-white font-semibold cursor-pointer"
+                    style={{ background: "#000" }}
                   >
                     Commander
                   </div>

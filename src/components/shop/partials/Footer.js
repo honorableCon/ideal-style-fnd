@@ -51,16 +51,7 @@ const Footer = (props) => {
                     Mes Informations
                   </a>
                 </li>
-                {/* <li class="mb-4">
-                  <a href="#" class="hover:underline">
-                    Mes Adresses
-                  </a>
-                </li>
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">
-                    Mes Bons de réduction
-                  </a>
-                </li> */}
+
                 <li onClick={(e) => logout()} class="mb-4">
                   <div class="hover:underline">Deconnexion</div>
                 </li>
@@ -321,7 +312,10 @@ const Footer = (props) => {
                     src="https://www.edigitalagency.com.au/wp-content/uploads/TikTok-logo-on-smooth-edges-black-square.png"
                     alt="tiktok"
                   />
-                  <a href="/" class="ml-4 hover:underline">
+                  <a
+                    href="www.tiktok.com/@idealstylesenegal"
+                    class="ml-4 hover:underline"
+                  >
                     Tik-Tok
                   </a>
                 </li>
