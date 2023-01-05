@@ -20,11 +20,12 @@ const Hero = (props) => {
           {
             cName: "TOUTEs NOS nouveautés",
             _id: "all",
-            cImage: "1672935308177_new.jpeg",
+            cImage: "customize/1672946189145_new.jpeg",
           },
         ];
         responseData.Categories.filter((item) => {
           if (item.cName == "Nos Coups De Coeur") {
+            item.cImage = `categories/${item.cImage}`;
             categories.push(item);
           }
         });
@@ -45,7 +46,7 @@ const Hero = (props) => {
                 <div className="h-fit col-span-1 m-2 flex flex-col bg-black overflow-hidden items-center justify-center space-y-2  md:mt-32 relative">
                   <img
                     className="h-full object-cover object-top opacity-75 hover:opacity-75 scale-im  transition duration-500 ease-in-out"
-                    src={`${apiURL}/uploads/categories/${item.cImage}`}
+                    src={`${apiURL}/uploads/${item.cImage}`}
                     alt="pic"
                   />
                   <div className="font-medium absolute top-0 left-0 ml-8 pt-8 md:ml-10 md:pt-16">
