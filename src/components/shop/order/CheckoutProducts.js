@@ -116,16 +116,16 @@ export const CheckoutComponent = (props) => {
                   <DropIn
                     options={{
                       authorization: state.clientToken,
-                      paypal: {
-                        flow: "vault",
-                      },
+                      // paypal: {
+                      //   flow: "vault",
+                      // },
                     }}
                     onInstance={(instance) => (state.instance = instance)}
                   />
                   {/* radiobutton */}
                   <fieldset className="flex flex-col py-2">
                     <label htmlFor="address" className="text-black pb-4">
-                      Mode de paiement locales
+                      Mode de paiement locale (784725303)
                     </label>
                     <div className="flex gap-8">
                       <div className="flex items-center gap-2">

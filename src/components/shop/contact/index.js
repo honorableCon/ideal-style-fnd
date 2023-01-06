@@ -87,29 +87,6 @@ const ContactComponent = () => {
           {!data.error ? "" : alert(data.error.email, "red")}
         </div>
         <div className="flex flex-col">
-          <label htmlFor="reference">
-            Référence Commande{" "}
-            <span className="text-sm text-gray-600 ml-1">*</span>
-          </label>
-          <input
-            onChange={(e) =>
-              setData({
-                ...data,
-                success: false,
-                error: {},
-                name: e.target.value,
-              })
-            }
-            value={data.reference}
-            type="text"
-            id="reference"
-            className={`${
-              data.error.name ? "border-red-500" : ""
-            } px-4 py-2 focus:outline-none border`}
-          />
-          {!data.error ? "" : alert(data.error.name, "red")}
-        </div>
-        <div className="flex flex-col">
           <label htmlFor="email">
             Pièces jointes<span className="text-sm text-gray-600 ml-1"></span>
           </label>

@@ -10,9 +10,9 @@ const WhoAmiComponent = () => {
         Qui sommes-nous ?
       </h1>
       <p className="text-black mx-8 md:mx-64 text-justify leading-7 mb-16">
-        Ideal Style est une boutique de vêtements prêt à porter basée au Sénégal
-        pour les femmes musulmanes modernes et toute femme désirant s’habiller
-        de manière moderne tout en restant pudique. <br />
+        Créé en 2015, Ideal Style est une boutique de vêtements prêts à porter
+        basée au Sénégal pour les femmes musulmanes modernes et toute femme
+        désirant s’habiller de manière moderne tout en restant pudique. <br />
         Tuniques, chemisiers, gilets, robes, abayas, pantalons, foulards, jupes,
         vestes, combinaisons, ensembles, hijabs et accessoires etc…, Ideal Style
         propose à une clientèle féminine, en quête d’originalité, des pièces
